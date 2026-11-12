@@ -1,0 +1,705 @@
+/* ==============================
+   1. VARIÁVEIS E CONFIGURAÇÕES
+============================== */
+
+:root {
+    --rosa-claro: #F9D0D6;
+    --vinho: #6A0B23;
+    --perola: #F5F0ED;
+    --rosa-antigo: #DA9EA6;
+    --rosa-suave: #FFE0DF;
+    --branco: #FFFFFF;
+
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-texto: 'DM Sans', sans-serif;
+
+    --transicao: 0.3s ease;
+    --sombra: 0 0.5rem 1.5rem rgba(106, 11, 35, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background: var(--perola);
+    color: var(--vinho);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 2rem;
+}
+
+/* ==============================
+   2. ELEMENTOS GERAIS
+============================== */
+
+.titulo {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.titulo span,
+.etiqueta,
+.sobre-texto span,
+.destaque-texto span,
+.contato span {
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+}
+
+.titulo h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.4rem;
+    margin: 0.8rem 0;
+}
+
+.titulo p {
+    color: #86505E;
+    font-size: 1rem;
+}
+
+.botao {
+    display: inline-block;
+    background: var(--vinho);
+    color: var(--branco);
+    padding: 1rem 1.8rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    transition: var(--transicao);
+}
+
+.botao:hover {
+    background: var(--rosa-antigo);
+    transform: translateY(-0.25rem);
+    box-shadow: var(--sombra);
+}
+
+/* ==============================
+   3. AVISO E CABEÇALHO
+============================== */
+
+.aviso {
+    background: var(--vinho);
+    color: var(--branco);
+    text-align: center;
+    padding: 0.7rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+}
+
+.cabecalho {
+    background: var(--rosa-claro);
+    padding: 1.3rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--rosa-antigo);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.menu a {
+    font-size: 0.9rem;
+    transition: var(--transicao);
+}
+
+.menu a:hover {
+    color: var(--rosa-antigo);
+}
+
+.botao-menu {
+    background: var(--vinho);
+    color: var(--branco);
+    padding: 0.8rem 1.4rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    transition: var(--transicao);
+}
+
+.botao-menu:hover {
+    background: var(--rosa-antigo);
+    transform: scale(1.05);
+}
+
+/* ==============================
+   4. SEÇÃO INICIAL
+============================== */
+
+.inicio {
+    min-height: 35rem;
+    padding: 5rem 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+
+    background:
+        radial-gradient(circle at 90% 20%, var(--rosa-antigo), transparent 40%),
+        linear-gradient(120deg, var(--rosa-claro), var(--perola));
+}
+
+.inicio-texto {
+    max-width: 33rem;
+}
+
+.etiqueta {
+    color: var(--vinho);
+}
+
+.inicio h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    line-height: 1.15;
+    margin: 1.5rem 0;
+}
+
+.inicio-texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #78404F;
+}
+
+.frase {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+.inicio-imagem {
+    width: 60rem;
+    height:25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: var(--transicao);
+}
+
+.inicio-imagem img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* ==============================
+   5. BENEFÍCIOS
+============================== */
+
+.beneficios {
+    padding: 6rem 10%;
+}
+
+.beneficios-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.beneficio-card {
+    background: var(--rosa-claro);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-radius: 1.2rem;
+    transition: var(--transicao);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-0.6rem);
+    background: var(--rosa-antigo);
+    box-shadow: var(--sombra);
+}
+
+.icone {
+    font-size: 2.5rem;
+}
+
+.beneficio-card h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.beneficio-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #78404F;
+}
+
+/* ==============================
+   6. PRODUTOS
+============================== */
+
+.produtos {
+    background: var(--rosa-suave);
+    padding: 6rem 10%;
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.produto-card {
+    background: var(--perola);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+.produto-card:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: 0 1rem 2rem rgba(106, 11, 35, 0.15);
+}
+
+.produto-imagem {
+    height: 18rem;
+    background: var(--rosa-claro);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: var(--transicao);
+}
+
+.produto-card:hover .produto-imagem img {
+    transform: scale(1.06);
+}
+
+.selo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--vinho);
+    color: var(--branco);
+    padding: 0.5rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.65rem;
+    z-index: 1;
+}
+
+.produto-info {
+    padding: 1.8rem;
+}
+
+.categoria {
+    color: var(--rosa-antigo);
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+    font-weight: 700;
+}
+
+.produto-info h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.35rem;
+    margin: 0.7rem 0;
+}
+
+.produto-info p {
+    color: #86505E;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    min-height: 3rem;
+}
+
+.produto-info strong {
+    display: block;
+    font-size: 1.3rem;
+    margin-top: 1.2rem;
+}
+
+.botao-produto {
+    display: block;
+    border: 1px solid var(--vinho);
+    border-radius: 2rem;
+    padding: 0.9rem;
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    transition: var(--transicao);
+}
+
+.botao-produto:hover {
+    background: var(--vinho);
+    color: var(--branco);
+}
+
+/* ==============================
+   7. BANNER DE DESTAQUE
+============================== */
+
+.destaque {
+    padding: 5rem 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    background: linear-gradient(120deg, var(--rosa-antigo), var(--rosa-claro));
+}
+
+.destaque-texto {
+    max-width: 35rem;
+}
+
+.destaque h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.8rem;
+    margin: 1.2rem 0;
+}
+
+.destaque p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #78404F;
+}
+
+.destaque-frase {
+    font-family: var(--fonte-titulo);
+    text-align: center;
+}
+
+.destaque-frase span {
+    font-size: 3.5rem;
+}
+
+.destaque-frase p {
+    font-size: 1rem;
+}
+
+/* ==============================
+   8. COMO COMPRAR
+============================== */
+
+.como-comprar {
+    padding: 6rem 10%;
+}
+
+.etapas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.etapa {
+    background: var(--rosa-claro);
+    border-radius: 1.2rem;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    transition: var(--transicao);
+}
+
+.etapa:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--sombra);
+}
+
+.etapa span {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    color: var(--rosa-antigo);
+}
+
+.etapa h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.etapa p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #78404F;
+}
+
+/* ==============================
+   9. SOBRE A MARCA
+============================== */
+
+.sobre {
+    padding: 6rem 12%;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    background: var(--rosa-suave);
+}
+
+.sobre-imagem {
+    flex: 1;
+    background: var(--rosa-claro);
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 23rem;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: var(--transicao);
+}
+
+.sobre-imagem img:hover {
+    transform: scale(1.04);
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    margin: 1.2rem 0;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #78404F;
+    margin-bottom: 1rem;
+}
+
+/* ==============================
+   10. DÚVIDAS FREQUENTES
+============================== */
+
+.duvidas {
+    padding: 6rem 10%;
+}
+
+.duvidas-container {
+    max-width: 48rem;
+    margin: auto;
+}
+
+.duvidas details {
+    background: var(--rosa-claro);
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+    transition: var(--transicao);
+}
+
+.duvidas details[open] {
+    background: var(--rosa-suave);
+}
+
+.duvidas summary {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.duvidas details p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+    color: #78404F;
+}
+
+/* ==============================
+   11. CONTATO
+============================== */
+
+.contato {
+    text-align: center;
+    padding: 6rem 10%;
+    background:
+        radial-gradient(circle at center, var(--rosa-antigo), transparent 65%),
+        var(--rosa-claro);
+}
+
+.contato h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.8rem;
+    margin: 1.2rem 0;
+}
+
+.contato p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #78404F;
+}
+
+/* ==============================
+   12. RODAPÉ
+============================== */
+
+.rodape {
+    background: var(--vinho);
+    color: var(--branco);
+    padding: 4rem 10% 1.5rem;
+}
+
+.rodape-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.rodape-marca h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+}
+
+.rodape-marca p {
+    color: var(--rosa-claro);
+    margin-top: 1rem;
+}
+
+.rodape-links h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+.rodape-links a {
+    display: block;
+    color: var(--rosa-claro);
+    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
+    transition: var(--transicao);
+}
+
+.rodape-links a:hover {
+    color: var(--branco);
+    padding-left: 0.3rem;
+}
+
+.rodape-final {
+    border-top: 1px solid var(--rosa-antigo);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--rosa-claro);
+}
+
+/* ==============================
+   13. RESPONSIVIDADE
+============================== */
+
+@media (max-width: 950px) {
+
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .beneficios-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produtos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 8%;
+    }
+
+    .inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .inicio-imagem {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    .beneficios-container,
+    .produtos-container,
+    .etapas-container,
+    .rodape-container {
+        grid-template-columns: 1fr;
+    }
+
+    .destaque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .destaque h2 {
+        font-size: 2.2rem;
+    }
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 8%;
+    }
+
+    .sobre-texto h2 {
+        font-size: 2rem;
+    }
+
+    .contato h2 {
+        font-size: 2.2rem;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
